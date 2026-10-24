@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0a0a0a">
+  <meta name="description" content="Portfolio of a Full-Stack Python Developer and EdTech Creator building TeachersOnline.">
+  <title>Portfolio — Full-Stack Python Developer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config={theme:{extend:{colors:{ink:'#0a0a0a',panel:'#101310',neon:'#00ff66',muted:'#929a93'},fontFamily:{sans:['Inter','ui-sans-serif','system-ui']}}}}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{color-scheme:dark;--bg:#0a0a0a;--green:#00ff66;--line:rgba(255,255,255,.09)}
+    *{box-sizing:border-box} body{background:var(--bg);color:#f4f6f4;font-family:Inter,ui-sans-serif,system-ui,sans-serif;margin:0} a{color:inherit;text-decoration:none} ::selection{background:#00ff66;color:#061009}
+    .mono{font-family:'DM Mono',monospace}.grid-bg{background-image:linear-gradient(rgba(0,255,102,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(0,255,102,.035) 1px,transparent 1px);background-size:48px 48px;mask-image:linear-gradient(to bottom,black,transparent 90%)}
+    .glow{background:radial-gradient(ellipse at 70% 25%,rgba(0,255,102,.12),transparent 38%),radial-gradient(ellipse at 15% 75%,rgba(0,255,102,.055),transparent 40%)}
+    .card{background:linear-gradient(145deg,rgba(20,24,21,.94),rgba(13,15,14,.94));border:1px solid var(--line);border-radius:18px;transition:border-color .2s,transform .2s}.card:hover{border-color:rgba(0,255,102,.32);transform:translateY(-2px)}
+    .pill{display:inline-flex;align-items:center;gap:.45rem;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.035);border-radius:999px;padding:.4rem .75rem;font-size:.76rem;color:#c7cec8}
+    .section-label{font:500 .72rem 'DM Mono',monospace;letter-spacing:.12em;text-transform:uppercase;color:var(--green)}
+    .bar{height:6px;background:#252a26;border-radius:99px;overflow:hidden}.bar>span{display:block;height:100%;width:0;background:linear-gradient(90deg,#00b94b,#00ff66);border-radius:99px;transition:width 1.1s cubic-bezier(.2,.7,.2,1)}
+    .reveal{opacity:0;transform:translateY(16px);transition:opacity .65s ease,transform .65s ease}.reveal.visible{opacity:1;transform:none}
+    .code-line{counter-increment:line}.code-line:before{content:counter(line);display:inline-block;width:2rem;color:#5c665e;user-select:none}
+    @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation-duration:.01ms!important;transition-duration:.01ms!important}.reveal{opacity:1;transform:none}}
+  </style>
+</head>
+<body class="antialiased">
+  <header class="fixed inset-x-0 top-0 z-50 px-4 pt-3">
+    <nav class="mx-auto flex max-w-6xl items-center justify-between rounded-2xl border border-white/10 bg-[#0b0e0c]/85 px-5 py-3 backdrop-blur-xl md:px-7" aria-label="Main navigation">
+      <a href="#home" class="flex items-center gap-2.5 font-semibold tracking-tight"><span class="flex h-7 w-7 items-center justify-center rounded-lg bg-neon text-black"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M8 8 4 12l4 4M16 8l4 4-4 4M14 4l-4 16"/></svg></span><span>Davie<span class="text-neon">.dev</span></span></a>
+      <div class="hidden items-center gap-7 text-sm text-white/65 md:flex"><a class="hover:text-white" href="#about">Profile</a><a class="hover:text-white" href="#skills">Skills</a><a class="hover:text-white" href="#work">Work</a><a class="hover:text-white" href="#playground">Playground</a></div>
+      <a class="rounded-full bg-neon px-4 py-2 text-sm font-semibold text-black transition hover:bg-[#7dffae]" href="#contact">Let’s talk <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="relative flex min-h-[740px] items-center overflow-hidden px-5 pb-20 pt-32 md:min-h-[790px] md:px-8">
+      <div class="grid-bg absolute inset-0"></div><div class="glow absolute inset-0"></div>
+      <div class="relative mx-auto grid w-full max-w-6xl items-center gap-14 lg:grid-cols-[1.15fr_.85fr]">
+        <div class="reveal">
+          <div class="mb-7 inline-flex items-center gap-2 rounded-full border border-neon/20 bg-neon/[.06] px-3 py-1.5 text-xs text-neon"><span class="relative flex h-2 w-2"><span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-neon opacity-60"></span><span class="relative inline-flex h-2 w-2 rounded-full bg-neon"></span></span> OPEN TO PYTHON / FULL-STACK ROLES</div>
+          <p class="section-label mb-4">Python Developer · EdTech Creator</p>
+          <h1 class="max-w-3xl text-5xl font-semibold leading-[1.04] tracking-[-.055em] sm:text-6xl md:text-7xl">I build useful<br><span class="bg-gradient-to-r from-neon to-[#a4ffbf] bg-clip-text text-transparent">things for the web.</span></h1>
+          <p class="mt-6 max-w-xl text-base leading-7 text-white/60 md:text-lg">Full-Stack Python Developer &amp; EdTech Creator. I turn practical ideas into thoughtful learning experiences, backed by reliable data and production-ready software.</p>
+          <div class="mt-8 flex flex-wrap gap-3"><a href="#work" class="rounded-full bg-neon px-5 py-3 text-sm font-semibold text-black hover:bg-[#7dffae]">Explore my work <span aria-hidden="true">↓</span></a><a href="https://github.com/DavieJ97" target="_blank" rel="noreferrer" class="rounded-full border border-white/15 px-5 py-3 text-sm font-medium text-white/80 hover:border-white/40">GitHub ↗</a></div>
+          <div class="mt-12 flex items-center gap-3 text-sm text-white/45"><span class="h-px w-9 bg-neon/60"></span>Building TeachersOnline, one useful feature at a time</div>
+        </div>
+        <div class="reveal relative mx-auto w-full max-w-[420px]" style="transition-delay:120ms">
+          <div class="absolute -inset-8 rounded-full bg-neon/10 blur-3xl"></div>
+          <div class="card relative p-5 md:p-6">
+            <div class="mb-5 flex items-center justify-between"><div class="flex gap-1.5"><i class="h-2.5 w-2.5 rounded-full bg-[#ff665a]"></i><i class="h-2.5 w-2.5 rounded-full bg-[#ffbd4a]"></i><i class="h-2.5 w-2.5 rounded-full bg-neon"></i></div><span class="mono text-[10px] tracking-wide text-white/35">PROFILE / 001</span></div>
+            <div class="rounded-xl border border-white/[.07] bg-black/30 p-4 md:p-5"><div class="mono text-xs leading-7 text-white/50"><div><span class="text-[#c792ea]">class</span> <span class="text-[#82aaff]">Developer</span>:</div><div class="pl-5"><span class="text-[#c792ea]">def</span> <span class="text-[#82aaff]">build</span>(<span class="text-[#f78c6c]">self</span>):</div><div class="pl-10">return {</div><div class="pl-14"><span class="text-[#c3e88d]">"focus"</span>: <span class="text-[#c3e88d]">"education"</span>,</div><div class="pl-14"><span class="text-[#c3e88d]">"stack"</span>: [<span class="text-[#c3e88d]">"Python"</span>, <span class="text-[#c3e88d]">"JS"</span>],</div><div class="pl-14"><span class="text-[#c3e88d]">"shipping"</span>: <span class="text-[#ffcb6b]">True</span></div><div class="pl-10">}</div><div class="mt-3 h-px bg-white/[.08]"></div><div class="mt-3 flex items-center gap-2 text-[11px] text-neon"><span class="h-1.5 w-1.5 rounded-full bg-neon"></span> deploying ideas to production<span class="animate-pulse">_</span></div></div></div>
+            <div class="mt-4 grid grid-cols-3 gap-2"><div class="rounded-xl border border-white/[.07] bg-white/[.025] p-3"><div class="text-lg font-semibold text-neon">90%</div><div class="mt-1 text-[10px] leading-4 text-white/45">Python capability</div></div><div class="rounded-xl border border-white/[.07] bg-white/[.025] p-3"><div class="text-lg font-semibold">01</div><div class="mt-1 text-[10px] leading-4 text-white/45">Production SaaS</div></div><div class="rounded-xl border border-white/[.07] bg-white/[.025] p-3"><div class="text-lg font-semibold">☁</div><div class="mt-1 text-[10px] leading-4 text-white/45">Cloud deployed</div></div></div>
+          </div>
+          <div class="absolute -right-4 top-16 hidden rounded-xl border border-neon/20 bg-[#101510] px-3 py-2 shadow-xl sm:block"><span class="mono text-[10px] text-neon">200 OK · LIVE</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="px-5 py-20 md:px-8 md:py-28"><div class="mx-auto grid max-w-6xl gap-10 md:grid-cols-[.7fr_1.3fr] md:gap-20">
+      <div class="reveal"><p class="section-label">01 / Profile</p><h2 class="mt-4 text-3xl font-semibold tracking-tight md:text-4xl">Software with a<br><span class="text-white/40">real-world purpose.</span></h2></div>
+      <div class="reveal" style="transition-delay:100ms"><p class="text-lg leading-8 text-white/65">I’m a Python-focused developer building <span class="text-white">TeachersOnline</span> — an EdTech platform shaped around the everyday needs of teachers. I enjoy working across the stack: modeling data, building backend features, and polishing the browser experience.</p><p class="mt-5 leading-7 text-white/45">My approach is practical and iterative: understand the problem, ship a clear solution, then refine it with care. I’m especially interested in tools that make learning and teaching more engaging.</p><div class="mt-7 flex flex-wrap gap-2"><span class="pill">✳ Product-minded</span><span class="pill">↗ Production experience</span><span class="pill">⌘ Continuous learner</span></div></div>
+    </div></section>
+
+    <section id="skills" class="border-y border-white/[.06] bg-[#0d0f0e] px-5 py-20 md:px-8 md:py-28"><div class="mx-auto max-w-6xl">
+      <div class="reveal mb-12 flex flex-col justify-between gap-4 md:flex-row md:items-end"><div><p class="section-label">02 / Technical toolkit</p><h2 class="mt-4 text-3xl font-semibold tracking-tight md:text-4xl">Skills that ship.</h2></div><p class="max-w-md text-sm leading-6 text-white/45">A growing full-stack toolkit, grounded in building and maintaining a live product.</p></div>
+      <div class="grid gap-4 md:grid-cols-2">
+        <div class="card reveal p-5 md:p-6"><div class="mb-6 flex items-center justify-between"><h3 class="font-semibold">Core proficiency</h3><span class="mono text-[10px] text-white/35">SELF-ASSESSMENT</span></div>
+          <div class="space-y-5"><div><div class="mb-2 flex justify-between text-sm"><span>Python</span><span class="mono text-neon">90%</span></div><div class="bar"><span data-width="90%"></span></div></div><div><div class="mb-2 flex justify-between text-sm"><span>JavaScript</span><span class="mono text-neon">60%+</span></div><div class="bar"><span data-width="64%"></span></div></div><div><div class="mb-2 flex justify-between text-sm"><span>Supabase · PostgreSQL</span><span class="mono text-neon">Product use</span></div><div class="bar"><span data-width="73%"></span></div></div><div><div class="mb-2 flex justify-between text-sm"><span>REST APIs</span><span class="mono text-neon">Hands-on</span></div><div class="bar"><span data-width="76%"></span></div></div></div>
+        </div>
+        <div class="card reveal p-5 md:p-6" style="transition-delay:100ms"><div class="mb-6 flex items-center justify-between"><h3 class="font-semibold">Tools &amp; technologies</h3><span class="mono text-[10px] text-white/35">IN THE WORKFLOW</span></div><div class="flex flex-wrap gap-2.5"><span class="pill"><span class="text-[#ffd43b]">●</span> Python</span><span class="pill"><span class="text-[#f7df1e]">●</span> JavaScript</span><span class="pill"><span class="text-[#3ecf8e]">●</span> Supabase</span><span class="pill">▤ PostgreSQL</span><span class="pill"><span class="text-[#9b59ff]">●</span> Render</span><span class="pill">↔ REST APIs</span><span class="pill">⑂ Git</span><span class="pill">⌘ GitHub</span><span class="pill">◉ HTML / CSS</span><span class="pill">⚡ Browser game loops</span></div><div class="mt-7 rounded-xl border border-white/[.07] bg-black/20 p-4"><div class="mono text-[10px] text-white/35">DEPLOYMENT FLOW</div><div class="mt-3 flex flex-wrap items-center gap-2 text-xs text-white/65"><span>GitHub</span><span class="text-neon">→</span><span>Render</span><span class="text-neon">→</span><span>Live app</span><span class="ml-auto rounded-full bg-neon/10 px-2 py-1 text-[10px] text-neon">AUTOMATED</span></div></div></div>
+      </div>
+    </div></section>
+
+    <section id="workflow" class="px-5 py-20 md:px-8 md:py-28"><div class="mx-auto max-w-6xl">
+      <div class="reveal mb-12"><p class="section-label">03 / Engineering workflow</p><h2 class="mt-4 text-3xl font-semibold tracking-tight md:text-4xl">From problem to production.</h2><p class="mt-4 max-w-xl leading-7 text-white/45">A repeatable path from an educator’s need to a dependable feature in the hands of its users.</p></div>
+      <div class="relative grid gap-4 md:grid-cols-4"><div class="absolute left-[9%] right-[9%] top-7 hidden h-px bg-gradient-to-r from-neon/5 via-neon/40 to-neon/5 md:block"></div>
+        <article class="card reveal relative p-5"><div class="mono mb-5 flex h-11 w-11 items-center justify-center rounded-xl border border-neon/20 bg-neon/[.07] text-neon">01</div><h3 class="font-semibold">Requirement analysis</h3><p class="mt-2 text-sm leading-6 text-white/45">Understand the teaching context, define the user need, and scope a useful solution.</p><span class="mono mt-5 block text-[10px] text-white/30">LISTEN → DEFINE</span></article>
+        <article class="card reveal relative p-5" style="transition-delay:80ms"><div class="mono mb-5 flex h-11 w-11 items-center justify-center rounded-xl border border-neon/20 bg-neon/[.07] text-neon">02</div><h3 class="font-semibold">Supabase data modeling</h3><p class="mt-2 text-sm leading-6 text-white/45">Shape clear PostgreSQL tables, relationships, and access policies around the product.</p><span class="mono mt-5 block text-[10px] text-white/30">MODEL → SECURE</span></article>
+        <article class="card reveal relative p-5" style="transition-delay:160ms"><div class="mono mb-5 flex h-11 w-11 items-center justify-center rounded-xl border border-neon/20 bg-neon/[.07] text-neon">03</div><h3 class="font-semibold">Python backend logic</h3><p class="mt-2 text-sm leading-6 text-white/45">Build maintainable application logic and APIs that turn requirements into features.</p><span class="mono mt-5 block text-[10px] text-white/30">BUILD → ITERATE</span></article>
+        <article class="card reveal relative p-5" style="transition-delay:240ms"><div class="mono mb-5 flex h-11 w-11 items-center justify-center rounded-xl border border-neon/20 bg-neon/[.07] text-neon">04</div><h3 class="font-semibold">Render cloud deployment</h3><p class="mt-2 text-sm leading-6 text-white/45">Ship from version control, verify the live service, and keep improving from feedback.</p><span class="mono mt-5 block text-[10px] text-white/30">DEPLOY → LEARN</span></article>
+      </div>
+    </div></section>
+
+    <section id="work" class="border-y border-white/[.06] bg-[#0d0f0e] px-5 py-20 md:px-8 md:py-28"><div class="mx-auto max-w-6xl">
+      <div class="reveal mb-12 flex flex-col justify-between gap-5 sm:flex-row sm:items-end"><div><p class="section-label">04 / Featured case study</p><h2 class="mt-4 text-3xl font-semibold tracking-tight md:text-4xl">TeachersOnline<span class="text-neon">.</span></h2></div><a class="inline-flex w-fit items-center gap-2 rounded-full border border-neon/30 px-4 py-2.5 text-sm text-neon hover:bg-neon/10" href="https://www.teachersonline.app" target="_blank" rel="noreferrer">Visit live platform <span>↗</span></a></div>
+      <div class="grid gap-5 lg:grid-cols-[1.05fr_.95fr]">
+        <div class="card reveal relative min-h-[330px] overflow-hidden p-6 md:p-8"><div class="absolute inset-0 opacity-70" style="background:radial-gradient(ellipse at 78% 38%,rgba(0,255,102,.14),transparent 40%),linear-gradient(135deg,transparent 45%,rgba(0,255,102,.035))"></div><div class="relative"><div class="flex items-center justify-between"><span class="pill border-neon/20 bg-neon/[.06] text-neon">LIVE · EDTECH SAAS</span><span class="mono text-[10px] text-white/35">PROJECT / 001</span></div><div class="mt-12 max-w-md"><div class="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl border border-neon/20 bg-neon/[.08] text-2xl text-neon">T</div><h3 class="text-3xl font-semibold tracking-tight">Tools made for<br>the people who teach.</h3><p class="mt-4 max-w-sm text-sm leading-6 text-white/50">A practical online platform for teachers, centered on useful resources and engaging classroom experiences.</p><div class="mt-6 flex flex-wrap gap-2"><span class="pill">Python</span><span class="pill">Supabase</span><span class="pill">JavaScript</span><span class="pill">Render</span></div></div></div></div>
+        <div class="reveal space-y-3" style="transition-delay:100ms">
+          <article class="card p-5"><div class="flex gap-4"><span class="mt-1 flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-neon/[.08] text-neon">✳</span><div><h3 class="font-semibold">Automated resource generators</h3><p class="mt-2 text-sm leading-6 text-white/45">Built tools that help educators generate classroom-ready resources with less repetitive work.</p></div></div></article>
+          <article class="card p-5"><div class="flex gap-4"><span class="mt-1 flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-neon/[.08] text-neon">◈</span><div><h3 class="font-semibold">Database security with Supabase</h3><p class="mt-2 text-sm leading-6 text-white/45">Modeled product data in PostgreSQL and configured Supabase access controls to protect user data.</p></div></div></article>
+          <article class="card p-5"><div class="flex gap-4"><span class="mt-1 flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-neon/[.08] text-neon">⚡</span><div><h3 class="font-semibold">Responsive browser game loops</h3><p class="mt-2 text-sm leading-6 text-white/45">Created JavaScript game interactions with efficient update loops for a smooth, low-latency feel.</p></div></div></article>
+          <div class="flex flex-wrap gap-3 pt-2"><a href="https://github.com/DavieJ97/TeachersOnlineGames.git" target="_blank" rel="noreferrer" class="inline-flex items-center gap-2 rounded-full border border-white/15 px-4 py-2.5 text-sm text-white/75 hover:border-white/35">GitHub repository <span>↗</span></a><span class="self-center text-xs text-white/35">TeachersOnlineGames</span></div>
+        </div>
+      </div>
+    </div></section>
+
+    <section id="playground" class="px-5 py-20 md:px-8 md:py-28"><div class="mx-auto max-w-6xl">
+      <div class="reveal mb-10"><p class="section-label">05 / Interactive playground</p><h2 class="mt-4 text-3xl font-semibold tracking-tight md:text-4xl">A tiny API sandbox.</h2><p class="mt-4 max-w-xl leading-7 text-white/45">Inspect a small Python endpoint shape, then run a mock request to see the response. No server call required.</p></div>
+      <div class="card reveal overflow-hidden"><div class="flex flex-wrap items-center justify-between gap-3 border-b border-white/[.08] px-5 py-4"><div class="flex items-center gap-3"><span class="flex h-7 w-7 items-center justify-center rounded-lg bg-[#3776ab]/20 text-xs text-[#83c7ff]">Py</span><span class="mono text-xs text-white/60">resources.py</span><span class="rounded-full bg-white/[.05] px-2 py-1 text-[10px] text-white/35">Python · Flask</span></div><button id="copy-code" class="rounded-full border border-white/10 px-3 py-1.5 text-xs text-white/55 hover:border-white/30 hover:text-white">Copy snippet</button></div>
+        <div class="grid lg:grid-cols-[1fr_.78fr]"><div class="overflow-x-auto p-5 md:p-7"><pre id="code-snippet" class="mono text-[12px] leading-7 text-[#c6d2c7] md:text-[13px]"><code><span class="code-line"><span class="text-[#c792ea]">@app.get</span>(<span class="text-[#c3e88d]">"/api/resources/&lt;int:resource_id&gt;"</span>)</span>
+<span class="code-line"><span class="text-[#c792ea]">def</span> <span class="text-[#82aaff]">get_resource</span>(resource_id):</span>
+<span class="code-line">    resource = repository.get(resource_id)</span>
+<span class="code-line">    <span class="text-[#c792ea]">if</span> resource <span class="text-[#c792ea]">is</span> <span class="text-[#ffcb6b]">None</span>:</span>
+<span class="code-line">        <span class="text-[#c792ea]">return</span> {<span class="text-[#c3e88d]">"error"</span>: <span class="text-[#c3e88d]">"not found"</span>}, <span class="text-[#f78c6c]">404</span></span>
+<span class="code-line">    <span class="text-[#c792ea]">return</span> {</span>
+<span class="code-line">        <span class="text-[#c3e88d]">"id"</span>: resource.id,</span>
+<span class="code-line">        <span class="text-[#c3e88d]">"title"</span>: resource.title,</span>
+<span class="code-line">        <span class="text-[#c3e88d]">"status"</span>: <span class="text-[#c3e88d]">"ready"</span></span>
+<span class="code-line">    }, <span class="text-[#f78c6c]">200</span></span></code></pre></div>
+          <div class="border-t border-white/[.08] bg-black/20 p-5 md:p-7 lg:border-l lg:border-t-0"><div class="flex items-center justify-between"><div><p class="mono text-[10px] tracking-widest text-white/35">REQUEST</p><p class="mt-1 text-sm font-medium">GET /api/resources/42</p></div><button id="run-request" class="rounded-full bg-neon px-4 py-2 text-xs font-semibold text-black hover:bg-[#7dffae]">▶ Run request</button></div><div class="mt-5 rounded-xl border border-white/[.07] bg-[#090b09] p-4"><div class="mb-3 flex items-center gap-2"><span id="response-dot" class="h-1.5 w-1.5 rounded-full bg-white/25"></span><span id="response-status" class="mono text-[10px] text-white/40">WAITING FOR REQUEST</span></div><pre id="response-body" class="mono min-h-[100px] whitespace-pre-wrap text-xs leading-6 text-white/40">Click “Run request” to inspect a sample response.</pre></div><p class="mt-3 text-[11px] leading-5 text-white/35">Demo only · illustrates a typical JSON response shape.</p></div>
+        </div></div>
+    </div></section>
+
+    <section id="contact" class="relative overflow-hidden border-t border-white/[.06] bg-[#0d0f0e] px-5 py-20 md:px-8 md:py-24"><div class="glow absolute inset-0"></div><div class="relative mx-auto flex max-w-6xl flex-col justify-between gap-8 md:flex-row md:items-end"><div class="reveal"><p class="section-label">06 / Get in touch</p><h2 class="mt-4 max-w-xl text-4xl font-semibold tracking-tight md:text-5xl">Have a good problem?<br><span class="text-neon">Let’s build.</span></h2><p class="mt-5 max-w-lg text-sm leading-6 text-white/50">I’m open to Python Developer and Full-Stack Engineer opportunities, especially where technology can make a real difference.</p></div><div class="reveal flex flex-wrap gap-3" style="transition-delay:100ms"><a href="mailto:YOUR_EMAIL@example.com" class="rounded-full bg-neon px-5 py-3 text-sm font-semibold text-black hover:bg-[#7dffae]">Email me ↗</a><a href="https://github.com/DavieJ97" target="_blank" rel="noreferrer" class="rounded-full border border-white/15 px-5 py-3 text-sm text-white/75 hover:border-white/40">GitHub ↗</a><a href="https://www.teachersonline.app" target="_blank" rel="noreferrer" class="rounded-full border border-white/15 px-5 py-3 text-sm text-white/75 hover:border-white/40">TeachersOnline ↗</a></div></div></section>
+  </main>
+  <footer class="px-5 py-6 md:px-8"><div class="mx-auto flex max-w-6xl flex-col gap-3 text-xs text-white/35 sm:flex-row sm:items-center sm:justify-between"><a href="#home" class="font-medium text-white/60">Davie<span class="text-neon">.dev</span></a><span>Designed and built with care · © <span id="year"></span></span><a href="#home" class="hover:text-neon">Back to top ↑</a></div></footer>
+  <script>
+    (()=>{
+      const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');entry.target.querySelectorAll('.bar>span').forEach(bar=>bar.style.width=bar.dataset.width||'0');observer.unobserve(entry.target)}}),{threshold:.14});
+      document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+      document.getElementById('year').textContent=new Date().getFullYear();
+      const run=document.getElementById('run-request'),status=document.getElementById('response-status'),body=document.getElementById('response-body'),dot=document.getElementById('response-dot');
+      run.addEventListener('click',()=>{run.disabled=true;run.textContent='Running…';status.textContent='REQUESTING';dot.className='h-1.5 w-1.5 rounded-full bg-amber-300 animate-pulse';body.textContent='Waiting for response…';window.setTimeout(()=>{status.textContent='200 OK · 18 MS';status.className='mono text-[10px] text-neon';dot.className='h-1.5 w-1.5 rounded-full bg-neon';body.textContent=JSON.stringify({id:42,title:'Fraction practice pack',status:'ready'},null,2);run.disabled=false;run.textContent='↻ Run again'},550)});
+      document.getElementById('copy-code').addEventListener('click',async event=>{const button=event.currentTarget,source=document.querySelector('#code-snippet code').innerText;try{await navigator.clipboard.writeText(source);button.textContent='Copied!'}catch{button.textContent='Select to copy'}window.setTimeout(()=>button.textContent='Copy snippet',1600)});
+    })();
+  </script>
+</body>
+</html>
