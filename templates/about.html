@@ -1,0 +1,38 @@
+<section id="about" class="px-5 py-20 md:px-8 md:py-28">
+    <div class="mx-auto max-w-6xl">
+        <div class="reveal mb-10 md:mb-12">
+            <p class="section-label">01 / A little about me</p>
+            <h2 class="mt-4 text-3xl font-semibold tracking-tight md:text-4xl">Developer at heart.<br><span class="text-white/40">Builder by curiosity.</span></h2>
+        </div>
+
+        <div class="grid items-center gap-8 md:grid-cols-[.78fr_1.22fr] md:gap-14 lg:gap-20">
+            <figure class="reveal relative mx-auto w-full max-w-sm" style="transition-delay:80ms">
+                <div class="absolute -inset-3 rounded-[26px] bg-neon/10 blur-2xl"></div>
+                <div class="card relative overflow-hidden rounded-2xl p-2">
+                    <img
+                        src="{{ url_for('static', filename='images/profilepic.jpeg') }}"
+                        alt="Dawid De Lange, self-taught Python developer and EdTech creator"
+                        class="aspect-[4/5] w-full rounded-xl object-cover object-top"
+                        loading="lazy"
+                    >
+                    <figcaption class="absolute inset-x-2 bottom-2 rounded-b-xl bg-gradient-to-t from-black/90 via-black/60 to-transparent px-5 pb-5 pt-16">
+                        <p class="text-xl font-semibold">Dawid De Lange</p>
+                        <p class="mt-1 text-sm text-neon">Python Developer</p>
+                    </figcaption>
+                </div>
+                <span class="absolute -right-3 top-5 rounded-full border border-neon/20 bg-[#101510] px-3 py-1.5 font-mono text-[10px] text-neon shadow-lg">EDTECH BUILDER</span>
+            </figure>
+
+            <div class="reveal" style="transition-delay:160ms">
+                <p class="text-lg leading-8 text-white/70">I’m <span class="font-semibold text-white">Dawid De Lange</span>—a self-taught Python developer and creator. My path into software began in solving day to day issues. I looked at the world around me and thought how can i make life easier. That's when I saw how much time teachers lost to manual lesson prep and fragmented tools.</p>
+                <p class="mt-5 leading-7 text-white/50">Wanting to solve those everyday problems, I taught myself Python, database management, and interactive web development. That journey became <a href="https://www.teachersonline.app" target="_blank" rel="noreferrer" class="font-medium text-neon underline decoration-neon/30 underline-offset-4 hover:decoration-neon">TeachersOnline</a>—a production SaaS platform designed to help teachers create engaging, gamified lessons with less friction.</p>
+                <p class="mt-5 leading-7 text-white/50">I enjoy working where backend logic, user experience, and practical software design meet. Away from shipping features and refining data models, I’m usually learning something new, experimenting with code, or looking for ways technology can make a complex workflow feel simple.</p>
+                <div class="mt-7 flex flex-wrap gap-2">
+                    <span class="pill">✳ Former educator</span>
+                    <span class="pill">⌘ Self-taught developer</span>
+                    <span class="pill">↗ EdTech creator</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
