@@ -1,66 +1,143 @@
-<section id="work" class="border-y border-white/[.06] bg-[#0d0f0e] px-5 py-20 md:px-8 md:py-28">
+<section id="work" class="scroll-mt-24 border-y border-white/[.06] bg-[#0d0f0e] px-5 py-20 md:px-8 md:py-28">
     <div class="mx-auto max-w-6xl">
-        <div class="reveal mb-12 flex flex-col justify-between gap-5 sm:flex-row sm:items-end">
-            <div>
-                <p class="section-label">04 / Featured case study</p>
-                <h2 class="mt-4 text-3xl font-semibold tracking-tight md:text-4xl">TeachersOnline<span class="text-neon">.</span></h2>
+        <header class="reveal mb-10 max-w-4xl md:mb-14">
+            <p class="section-label">04 / Featured case study</p>
+            <h2 class="mt-4 text-3xl font-semibold leading-tight tracking-tight md:text-5xl">TeachersOnline:<br><span class="text-white/45">From Desktop Application to Web Platform</span></h2>
+            <p class="mt-6 max-w-3xl text-base leading-7 text-white/65 md:text-lg md:leading-8">TeachersOnline began as a desktop application intended to make interactive educational games easier for teachers to use. As I considered how teachers install, access, and share classroom tools, I saw friction in the desktop delivery model. I adapted the project into a browser-based platform. The journey reflects an iterative way of building: identify a problem, create an initial solution, learn from its limits, and reshape the architecture around its users.</p>
+        </header>
+
+        <div class="mb-16 grid items-stretch gap-5 lg:grid-cols-[.9fr_1.1fr]">
+            <div class="card reveal flex flex-col justify-between p-6 md:p-8">
+                <div>
+                    <div class="flex flex-wrap gap-2"><span class="pill border-neon/20 bg-neon/[.06] text-neon">EDTECH PLATFORM</span><span class="pill">Evolving project</span></div>
+                    <h3 class="mt-8 text-2xl font-semibold tracking-tight">Built around a teacher’s workflow.</h3>
+                    <p class="mt-4 text-sm leading-7 text-white/50">The goal is to make interactive games and practical lesson resources easier to reach, prepare, and use in class—without turning the technology itself into another task for the teacher.</p>
+                </div>
+                <div class="mt-8 flex flex-wrap gap-2"><span class="pill">Python · Flask</span><span class="pill">JavaScript · CSS</span><span class="pill">Supabase</span><span class="pill">Python DOCX generation</span></div>
             </div>
-            <a class="inline-flex w-fit items-center gap-2 rounded-full border border-neon/30 px-4 py-2.5 text-sm text-neon hover:bg-neon/10" href="https://www.teachersonline.app" target="_blank" rel="noreferrer">Visit live platform <span>↗</span></a>
+            <figure class="card reveal overflow-hidden p-2" style="transition-delay:100ms">
+                <img src="{{ url_for('static', filename='images/teachersonline-classroom-pirates.jpg') }}" alt="Classroom Pirates browser game with a team scoreboard, word choices, and classroom game board" class="aspect-[16/9] w-full rounded-xl object-cover object-top" loading="lazy">
+                <figcaption class="flex flex-col gap-1 px-4 py-3 text-xs text-white/45 sm:flex-row sm:items-center sm:justify-between"><span>Classroom Pirates · current browser platform</span><span class="mono text-[10px] text-white/30">WEB GAME PREVIEW</span></figcaption>
+            </figure>
         </div>
-        <div class="grid gap-5 lg:grid-cols-[1.05fr_.95fr]">
-            <div class="card reveal relative min-h-[330px] overflow-hidden p-6 md:p-8">
-                <div class="absolute inset-0 opacity-70" style="background:radial-gradient(ellipse at 78% 38%,rgba(0,255,102,.14),transparent 40%),linear-gradient(135deg,transparent 45%,rgba(0,255,102,.035))"></div>
-                <div class="relative">
-                    <div class="flex items-center justify-between">
-                        <span class="pill border-neon/20 bg-neon/[.06] text-neon">LIVE · EDTECH SAAS</span>
-                        <span class="mono text-[10px] text-white/35">PROJECT / 001</span>
-                    </div>
-                    <div class="mt-12 max-w-md">
-                        <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl border border-neon/20 bg-neon/[.08] text-2xl text-neon">T</div>
-                        <h3 class="text-3xl font-semibold tracking-tight">Tools made for<br>the people who teach.</h3>
-                        <p class="mt-4 max-w-sm text-sm leading-6 text-white/50">A practical online platform for teachers, centered on useful resources and engaging classroom experiences.</p>
-                        <div class="mt-6 flex flex-wrap gap-2">
-                            <span class="pill">Python</span>
-                            <span class="pill">Supabase</span>
-                            <span class="pill">JavaScript</span>
-                            <span class="pill">Render</span>
-                        </div>
-                    </div>
+
+        <section aria-labelledby="problem-heading" class="mb-16">
+            <div class="reveal mb-6"><p class="section-label">01 / The problem</p><h3 id="problem-heading" class="mt-3 text-2xl font-semibold tracking-tight md:text-3xl">Keep the lesson moving.</h3><p class="mt-3 max-w-2xl text-sm leading-6 text-white/45">PowerPoint game templates can be a convenient starting point. In some implementations, though, adapting or maintaining them can take extra effort: complex animations and interactions may break, and keeping score can fall to the teacher.</p></div>
+            <div class="grid gap-3 md:grid-cols-3">
+                <article class="card reveal p-5"><span class="mono text-[10px] text-neon">01 · PREPARATION</span><h4 class="mt-3 font-semibold">Manual setup</h4><p class="mt-2 text-sm leading-6 text-white/45">Editing a template for a new class or activity can add preparation work.</p></article>
+                <article class="card reveal p-5" style="transition-delay:80ms"><span class="mono text-[10px] text-neon">02 · RELIABILITY</span><h4 class="mt-3 font-semibold">Fragile interactions</h4><p class="mt-2 text-sm leading-6 text-white/45">When a complex animation or interaction stops behaving as expected, the teacher has to troubleshoot during the lesson.</p></article>
+                <article class="card reveal p-5" style="transition-delay:160ms"><span class="mono text-[10px] text-neon">03 · CLASSROOM FLOW</span><h4 class="mt-3 font-semibold">Scoring by hand</h4><p class="mt-2 text-sm leading-6 text-white/45">Manual scorekeeping can pull attention away from facilitating the activity.</p></article>
+            </div>
+            <p class="mt-4 text-xs text-white/30">These were the challenges that motivated my project, not a claim about every teacher or every presentation.</p>
+        </section>
+
+        <section aria-labelledby="desktop-heading" class="mb-16 grid gap-5 lg:grid-cols-[.72fr_1.28fr]">
+            <div class="reveal"><p class="section-label">02 / First implementation</p><h3 id="desktop-heading" class="mt-3 text-2xl font-semibold tracking-tight md:text-3xl">A desktop app built while learning.</h3></div>
+            <div class="card reveal p-6 md:p-7" style="transition-delay:100ms">
+                <p class="text-sm leading-7 text-white/60">I started with an installable application built in <span class="text-white">Python, PyQt6, and Pygame</span>, with the aim of making interactive educational games easier to use. Building it pushed me to teach myself object-oriented programming: how to use classes and functions, and how to organize an application into reusable parts.</p>
+                <p class="mt-4 text-sm leading-7 text-white/45">That first version was a useful way to explore the problem and grow my programming skills. As I thought more about how the intended users would access and share the tools, the friction around installation and distribution became hard to ignore.</p>
+                <div class="mt-6 grid gap-3 sm:grid-cols-2">
+                    <div class="rounded-xl border border-white/[.07] bg-black/20 p-4"><p class="mono text-[10px] text-neon">WHAT IT TAUGHT ME</p><p class="mt-2 text-sm text-white/65">Python fundamentals, classes, functions, and reusable application structure.</p></div>
+                    <div class="rounded-xl border border-white/[.07] bg-black/20 p-4"><p class="mono text-[10px] text-neon">WHAT IT SET OUT TO DO</p><p class="mt-2 text-sm text-white/65">Give teachers a dedicated desktop way to use interactive educational games.</p></div>
                 </div>
             </div>
+        </section>
+
+        <section aria-labelledby="desktop-repos-heading" class="mb-16">
+            <div class="reveal mb-6">
+                <p class="section-label">Desktop source / earlier projects</p>
+                <h3 id="desktop-repos-heading" class="mt-3 text-2xl font-semibold tracking-tight md:text-3xl">The earlier builds are part of the story.</h3>
+                <p class="mt-3 max-w-3xl text-sm leading-6 text-white/45">These public repositories show two desktop tools I built for classroom use. Their READMEs include setup notes and project details, so you can inspect the work behind the transition.</p>
+            </div>
+            <div class="grid gap-4 md:grid-cols-2">
+                <article class="card reveal flex flex-col p-5 md:p-6">
+                    <div class="flex flex-wrap items-center justify-between gap-3"><span class="pill border-neon/20 bg-neon/[.06] text-neon">DESKTOP GAME APP</span><span class="mono text-[10px] text-white/35">PYTHON · PYQT6 · PYGAME</span></div>
+                    <h4 class="mt-5 text-lg font-semibold">Tay’s Teaching Games</h4>
+                    <p class="mt-2 flex-1 text-sm leading-6 text-white/45">The original classroom game app: its README describes team play, automatic scoring, teacher tools for editing lessons, and screenshots of the interface.</p>
+                    <a href="https://github.com/DavieJ97/Tay-s_teaching_Games" target="_blank" rel="noopener noreferrer" class="mt-5 inline-flex w-fit items-center gap-2 rounded-full border border-white/15 px-4 py-2.5 text-sm text-white/75 hover:border-white/35">View repo &amp; README <span>↗</span></a>
+                </article>
+                <article class="card reveal flex flex-col p-5 md:p-6" style="transition-delay:90ms">
+                    <div class="flex flex-wrap items-center justify-between gap-3"><span class="pill border-neon/20 bg-neon/[.06] text-neon">DESKTOP WORKSHEET TOOL</span><span class="mono text-[10px] text-white/35">PYTHON · PYQT6 · PYTHON-DOCX</span></div>
+                    <h4 class="mt-5 text-lg font-semibold">Worksheet Generator</h4>
+                    <p class="mt-2 flex-1 text-sm leading-6 text-white/45">A separate desktop tool for building worksheets with fill-in-the-blank, unscramble, and word-search activities, then exporting a Word worksheet and answer sheet.</p>
+                    <a href="https://github.com/DavieJ97/WorkSheet_Generator" target="_blank" rel="noopener noreferrer" class="mt-5 inline-flex w-fit items-center gap-2 rounded-full border border-white/15 px-4 py-2.5 text-sm text-white/75 hover:border-white/35">View repo &amp; README <span>↗</span></a>
+                </article>
+            </div>
+        </section>
+
+        <section aria-labelledby="friction-heading" class="mb-16">
+            <div class="reveal mb-6"><p class="section-label">03 / Reconsidering delivery</p><h3 id="friction-heading" class="mt-3 text-2xl font-semibold tracking-tight md:text-3xl">The application worked toward the goal; installation added friction.</h3><p class="mt-3 max-w-3xl text-sm leading-6 text-white/45">The desktop version was a valuable first step, but the delivery model asked teachers to install an app, manage updates, and find it on whichever computer they were using. Sharing it and its resources with another teacher also meant passing around an application. For this audience, a browser-based experience offered a simpler route in.</p></div>
+            <div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+                <div class="card reveal p-4"><span class="text-neon">↓</span><p class="mt-3 text-sm font-medium">Installation</p><p class="mt-1 text-xs leading-5 text-white/40">A hurdle for users who may not install desktop software often.</p></div>
+                <div class="card reveal p-4" style="transition-delay:60ms"><span class="text-neon">↻</span><p class="mt-3 text-sm font-medium">Updates</p><p class="mt-1 text-xs leading-5 text-white/40">New versions can require another download or update step.</p></div>
+                <div class="card reveal p-4" style="transition-delay:120ms"><span class="text-neon">▣</span><p class="mt-3 text-sm font-medium">Different computers</p><p class="mt-1 text-xs leading-5 text-white/40">The app may not be installed on each classroom computer.</p></div>
+                <div class="card reveal p-4" style="transition-delay:180ms"><span class="text-neon">↗</span><p class="mt-3 text-sm font-medium">Sharing</p><p class="mt-1 text-xs leading-5 text-white/40">A website is easier to send to another teacher than an installer.</p></div>
+            </div>
+        </section>
+
+        <section aria-labelledby="architecture-heading" class="mb-16">
+            <div class="reveal mb-7"><p class="section-label">04 / Rebuilding for the web</p><h3 id="architecture-heading" class="mt-3 text-2xl font-semibold tracking-tight md:text-3xl">The browser became the front door.</h3><p class="mt-3 max-w-3xl text-sm leading-6 text-white/45">I taught myself JavaScript and CSS and moved the project to Flask. Teachers can open the games in a compatible browser; I can update the platform centrally, and Python can continue handling work that fits the server better.</p></div>
+            <div class="grid gap-3 lg:grid-cols-3">
+                <article class="card reveal p-5 md:p-6"><div class="mono text-[10px] text-neon">01 · CLIENT</div><h4 class="mt-3 text-lg font-semibold">Teacher’s browser</h4><p class="mt-3 text-sm leading-6 text-white/45">HTML and CSS present the tools. JavaScript handles in-game interactions and game state in modules such as <span class="mono text-white/65">battleship.js</span> and <span class="mono text-white/65">classroom_pirates.js</span>.</p><span class="pill mt-5">JavaScript · CSS</span></article>
+                <article class="card reveal p-5 md:p-6" style="transition-delay:80ms"><div class="mono text-[10px] text-neon">02 · APPLICATION</div><h4 class="mt-3 text-lg font-semibold">Flask + Python</h4><p class="mt-3 text-sm leading-6 text-white/45">Flask serves pages and routes. Python handles worksheet and answer-key generation as Word documents, and provides the translation endpoint used by the worksheet editor.</p><span class="pill mt-5">Flask · python-docx</span></article>
+                <article class="card reveal p-5 md:p-6" style="transition-delay:160ms"><div class="mono text-[10px] text-neon">03 · DATA &amp; AUTH</div><h4 class="mt-3 text-lg font-semibold">Supabase</h4><p class="mt-3 text-sm leading-6 text-white/45">The app uses Supabase Auth for sign-up, login, and password recovery, and reads or updates profile and preference records in its PostgreSQL database.</p><span class="pill mt-5">Supabase Auth · PostgreSQL</span></article>
+            </div>
+            <div class="card reveal mt-4 flex flex-col items-start gap-3 p-5 sm:flex-row sm:items-center sm:justify-between"><div><p class="mono text-[10px] text-neon">REQUEST / RESPONSE FLOW</p><p class="mt-2 text-sm text-white/65">Browser interaction runs in JavaScript. Worksheet export is sent to Flask, which builds the documents in memory and returns them as a ZIP download.</p></div><div class="flex shrink-0 flex-wrap items-center gap-2 text-xs text-white/50"><span class="pill">Browser</span><span class="text-neon">→</span><span class="pill">Flask</span><span class="text-neon">→</span><span class="pill">DOCX + ZIP</span></div></div>
+        </section>
+
+        <section aria-labelledby="beyond-heading" class="mb-16 grid gap-5 lg:grid-cols-[.7fr_1.3fr]">
+            <div class="reveal"><p class="section-label">05 / Beyond games</p><h3 id="beyond-heading" class="mt-3 text-2xl font-semibold tracking-tight md:text-3xl">A broader teaching toolkit.</h3><p class="mt-3 text-sm leading-6 text-white/45">The web version grew beyond the original game concept into a set of classroom resources.</p></div>
             <div class="reveal space-y-3" style="transition-delay:100ms">
-                <article class="card p-5">
-                    <div class="flex gap-4">
-                        <span class="mt-1 flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-neon/[.08] text-neon">✳</span>
-                        <div>
-                            <h3 class="font-semibold">Automated resource generators</h3>
-                            <p class="mt-2 text-sm leading-6 text-white/45">Built tools that help educators generate classroom-ready resources with less repetitive work.</p>
-                        </div>
+                <article class="card p-5"><div class="flex flex-wrap items-start justify-between gap-3"><div><h4 class="font-semibold">Browser-based classroom games</h4><p class="mt-2 text-sm leading-6 text-white/45">The current code includes review games such as Battleship and Exploding Kittens, alongside the speaking game Classroom Pirates. Their interactive mechanics live in browser-side JavaScript.</p></div><span class="pill">Client-side game logic</span></div></article>
+                <article class="card p-5"><div class="flex flex-wrap items-start justify-between gap-3"><div><h4 class="font-semibold">Worksheet builder and Word export</h4><p class="mt-2 text-sm leading-6 text-white/45">Teachers can assemble unscramble, fill-in-the-blank, translation, and word-search sections. Python section classes build the worksheet and answer key; Flask returns both as a ZIP of Word documents.</p></div><span class="pill">Server-side Python</span></div></article>
+                <article class="card p-5"><div class="flex flex-wrap items-start justify-between gap-3"><div><h4 class="font-semibold">Translation support</h4><p class="mt-2 text-sm leading-6 text-white/45">The worksheet editor calls a Flask endpoint, which uses the <span class="mono text-white/65">deep-translator</span> package and Google Translator to request a translation.</p></div><span class="pill">Flask endpoint</span></div></article>
+            </div>
+        </section>
+
+        <section aria-labelledby="lessons-heading" class="mb-16">
+            <div class="reveal mb-6"><p class="section-label">06 / Engineering lessons</p><h3 id="lessons-heading" class="mt-3 text-2xl font-semibold tracking-tight md:text-3xl">What the transition taught me.</h3></div>
+            <div class="grid gap-3 md:grid-cols-2">
+                <article class="card reveal p-5"><h4 class="font-semibold">Architecture follows the user</h4><p class="mt-2 text-sm leading-6 text-white/45">Installation and sharing friction made browser access a better fit for teachers than preserving a desktop-only delivery path.</p></article>
+                <article class="card reveal p-5" style="transition-delay:70ms"><h4 class="font-semibold">Learn the tools the problem needs</h4><p class="mt-2 text-sm leading-6 text-white/45">Moving from PyQt6 and Pygame to Flask, JavaScript, and CSS meant learning new technologies to keep the product moving.</p></article>
+                <article class="card reveal p-5" style="transition-delay:140ms"><h4 class="font-semibold">Put work in the right place</h4><p class="mt-2 text-sm leading-6 text-white/45">Interactive game state belongs in the browser; generating Word worksheets and answer keys is a good fit for Python on the server.</p></article>
+                <article class="card reveal p-5" style="transition-delay:210ms"><h4 class="font-semibold">Keep adapting the first idea</h4><p class="mt-2 text-sm leading-6 text-white/45">The first implementation helped me start. Reviewing how it fit classroom workflows gave me a reason to change the delivery model.</p></article>
+            </div>
+        </section>
+
+        <section aria-labelledby="next-heading" class="mb-16">
+            <div class="reveal mb-6"><p class="section-label">07 / What’s next</p><h3 id="next-heading" class="mt-3 text-2xl font-semibold tracking-tight md:text-3xl">Still a work in progress.</h3></div>
+            <div class="grid gap-3 md:grid-cols-2">
+                <div class="card reveal p-5 md:p-6"><p class="mono text-[10px] text-neon">IN THE CURRENT PLATFORM</p><p class="mt-3 text-sm leading-6 text-white/55">Browser games, account and profile flows, and a worksheet editor with server-generated Word worksheets and answer keys.</p></div>
+                <div class="card reveal p-5 md:p-6" style="transition-delay:90ms"><p class="mono text-[10px] text-neon">LONGER-TERM DIRECTION</p><p class="mt-3 text-sm leading-6 text-white/55">Keep expanding the set of interactive teaching resources and make them easier to access, adapt, and share—so teachers can spend less time preparing and troubleshooting.</p><p class="mt-3 text-xs text-white/35">The homepage currently lists PowerPoint creation as “Coming Soon.”</p></div>
+            </div>
+        </section>
+
+        <section aria-labelledby="source-heading" class="card reveal overflow-hidden">
+            <div class="grid lg:grid-cols-[1fr_1fr]">
+                <div class="p-6 md:p-8">
+                    <p class="section-label">08 / Source code &amp; live demo</p>
+                    <h3 id="source-heading" class="mt-3 text-2xl font-semibold tracking-tight">See the project in action.</h3>
+                    <p class="mt-3 text-sm leading-6 text-white/45">A small excerpt from the Flask export route: each worksheet section renders itself into the Word document. The section classes keep each activity’s document-generation logic separate.</p>
+                    <div class="mt-6 flex flex-wrap gap-3">
+                        <a href="https://www.teachersonline.app" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-full bg-neon px-4 py-2.5 text-sm font-semibold text-black hover:bg-[#7dffae]">Open TeachersOnline <span>↗</span></a>
+                        <a href="https://github.com/DavieJ97/TeachersOnlineGames" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-full border border-white/15 px-4 py-2.5 text-sm text-white/75 hover:border-white/35">GitHub repository <span>↗</span></a>
                     </div>
-                </article>
-                <article class="card p-5">
-                    <div class="flex gap-4">
-                        <span class="mt-1 flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-neon/[.08] text-neon">◈</span>
-                        <div>
-                            <h3 class="font-semibold">Database security with Supabase</h3>
-                            <p class="mt-2 text-sm leading-6 text-white/45">Modeled product data in PostgreSQL and configured Supabase access controls to protect user data.</p>
-                        </div>
-                    </div>
-                </article>
-                <article class="card p-5">
-                    <div class="flex gap-4">
-                        <span class="mt-1 flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-neon/[.08] text-neon">⚡</span>
-                        <div>
-                            <h3 class="font-semibold">Responsive browser game loops</h3>
-                            <p class="mt-2 text-sm leading-6 text-white/45">Created JavaScript game interactions with efficient update loops for a smooth, low-latency feel.</p>
-                        </div>
-                    </div>
-                </article>
-                <div class="flex flex-wrap gap-3 pt-2">
-                    <a href="https://github.com/DavieJ97/TeachersOnlineGames.git" target="_blank" rel="noreferrer" class="inline-flex items-center gap-2 rounded-full border border-white/15 px-4 py-2.5 text-sm text-white/75 hover:border-white/35">GitHub repository <span>↗</span></a>
-                    <span class="self-center text-xs text-white/35">TeachersOnlineGames</span>
+                    <div class="mt-4 flex flex-wrap gap-x-4 gap-y-2 text-xs text-white/40"><a class="hover:text-neon" href="https://github.com/DavieJ97/TeachersOnlineGames/blob/main/app.py" target="_blank" rel="noopener noreferrer">Flask app.py ↗</a><a class="hover:text-neon" href="https://github.com/DavieJ97/TeachersOnlineGames/tree/main/generators" target="_blank" rel="noopener noreferrer">Python generators ↗</a><a class="hover:text-neon" href="https://github.com/DavieJ97/TeachersOnlineGames/tree/main/static/js/games" target="_blank" rel="noopener noreferrer">Browser game modules ↗</a></div>
+                </div>
+                <div class="border-t border-white/[.08] bg-black/25 p-5 md:p-8 lg:border-l lg:border-t-0">
+                    <div class="mb-4 flex items-center justify-between"><span class="mono text-xs text-white/50">app.py · worksheet export</span><span class="pill text-[10px]">REAL SOURCE EXCERPT</span></div>
+                    <pre class="overflow-x-auto rounded-xl border border-white/[.07] bg-[#080a08] p-4 text-xs leading-7 text-[#c6d2c7] md:p-5"><code><span class="text-[#c792ea]">for</span> section <span class="text-[#c792ea]">in</span> sections:
+    add_formatted_title(
+        doc,
+        section.get_title(),
+        section.formatting
+    )
+
+    section.export(doc)
+    doc.add_paragraph()</code></pre>
+                    <p class="mt-3 text-[11px] text-white/30">Source: <a class="underline decoration-white/20 underline-offset-2 hover:text-neon" href="https://github.com/DavieJ97/TeachersOnlineGames/blob/main/app.py" target="_blank" rel="noopener noreferrer">app.py on GitHub</a></p>
                 </div>
             </div>
-        </div>
+        </section>
     </div>
 </section>

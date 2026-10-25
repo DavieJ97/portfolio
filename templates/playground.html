@@ -2,52 +2,35 @@
     <div class="mx-auto max-w-6xl">
         <div class="reveal mb-10">
             <p class="section-label">05 / Interactive playground</p>
-            <h2 class="mt-4 text-3xl font-semibold tracking-tight md:text-4xl">A tiny API sandbox.</h2>
-            <p class="mt-4 max-w-xl leading-7 text-white/45">Inspect a small Python endpoint shape, then run a mock request to see the response. No server call required.</p>
+            <h2 class="mt-4 text-3xl font-semibold tracking-tight md:text-4xl">Try a classroom word scramble.</h2>
+            <p class="mt-4 max-w-xl leading-7 text-white/45">Unscramble a few classroom words and see your score. This small demo runs right in your browser, with no mock API calls.</p>
         </div>
-        <div class="card reveal overflow-hidden">
+        <div id="word-scramble" class="card reveal overflow-hidden">
             <div class="flex flex-wrap items-center justify-between gap-3 border-b border-white/[.08] px-5 py-4">
                 <div class="flex items-center gap-3">
-                    <span class="flex h-7 w-7 items-center justify-center rounded-lg bg-[#3776ab]/20 text-xs text-[#83c7ff]">Py</span>
-                    <span class="mono text-xs text-white/60">resources.py</span>
-                    <span class="rounded-full bg-white/[.05] px-2 py-1 text-[10px] text-white/35">Python · Flask</span>
+                    <span class="flex h-8 w-8 items-center justify-center rounded-xl border border-neon/20 bg-neon/[.08] text-neon">Aa</span>
+                    <div><p class="text-sm font-medium">Classroom vocabulary</p><p class="mono mt-0.5 text-[10px] text-white/35">BROWSER MINI-GAME · JAVASCRIPT</p></div>
                 </div>
-                <button id="copy-code" class="rounded-full border border-white/10 px-3 py-1.5 text-xs text-white/55 hover:border-white/30 hover:text-white">Copy snippet</button>
+                <p id="scramble-progress" class="mono text-[10px] tracking-wider text-white/40" aria-live="polite">WORD 1 OF 8</p>
             </div>
-            <div class="grid lg:grid-cols-[1fr_.78fr]">
-                <div class="overflow-x-auto p-5 md:p-7">
-                    <pre id="code-snippet" class="mono text-[12px] leading-7 text-[#c6d2c7] md:text-[13px]">
-                        <code>
-<span class="code-line"><span class="text-[#c792ea]">@app.get</span>(<span class="text-[#c3e88d]">"/api/resources/&lt;int:resource_id&gt;"</span>)</span>
-<span class="code-line"><span class="text-[#c792ea]">def</span><span class="text-[#82aaff]">get_resource</span>(resource_id):</span>
-<span class="code-line">    resource = repository.get(resource_id)</span>
-<span class="code-line">    <span class="text-[#c792ea]">if</span> resource <span class="text-[#c792ea]">is</span> <span class="text-[#ffcb6b]">None</span>:</span>
-<span class="code-line">        <span class="text-[#c792ea]">return</span> {<span class="text-[#c3e88d]">"error"</span>: <span class="text-[#c3e88d]">"not found"</span>}, <span class="text-[#f78c6c]">404</span></span>
-<span class="code-line">    <span class="text-[#c792ea]">return</span> {</span>
-<span class="code-line">        <span class="text-[#c3e88d]">"id"</span>: resource.id,
-<span class="code-line">        <span class="text-[#c3e88d]">"title"</span>: resource.title,</span>
-<span class="code-line">        <span class="text-[#c3e88d]">"status"</span>: <span class="text-[#c3e88d]">"ready"</span></span>
-<span class="code-line">    }, <span class="text-[#f78c6c]">200</span></span>
-                        </code>
-                    </pre>
-                    </div>
-                <div class="border-t border-white/[.08] bg-black/20 p-5 md:p-7 lg:border-l lg:border-t-0">
-                    <div class="flex items-center justify-between">
-                        <div>
-                            <p class="mono text-[10px] tracking-widest text-white/35">REQUEST</p>
-                            <p class="mt-1 text-sm font-medium">GET /api/resources/42</p>
-                        </div>
-                        <button id="run-request" class="rounded-full bg-neon px-4 py-2 text-xs font-semibold text-black hover:bg-[#7dffae]">▶ Run request</button>
-                    </div>
-                    <div class="mt-5 rounded-xl border border-white/[.07] bg-[#090b09] p-4">
-                        <div class="mb-3 flex items-center gap-2">
-                            <span id="response-dot" class="h-1.5 w-1.5 rounded-full bg-white/25"></span>
-                            <span id="response-status" class="mono text-[10px] text-white/40">WAITING FOR REQUEST</span>
-                        </div>
-                        <pre id="response-body" class="mono min-h-[100px] whitespace-pre-wrap text-xs leading-6 text-white/40">Click “Run request” to inspect a sample response.</pre>
-                    </div>
-                    <p class="mt-3 text-[11px] leading-5 text-white/35">Demo only · illustrates a typical JSON response shape.</p>
+            <div class="grid lg:grid-cols-[1fr_.62fr]">
+                <div class="p-5 md:p-8">
+                    <p class="mono text-[10px] tracking-[.16em] text-white/35">UNSCRAMBLE THIS WORD</p>
+                    <div id="scrambled-word" class="mt-4 flex min-h-16 flex-wrap items-center gap-2" aria-label="Scrambled word"></div>
+                    <form id="scramble-form" class="mt-6 flex flex-col gap-3 sm:flex-row">
+                        <label class="sr-only" for="scramble-answer">Your answer</label>
+                        <input id="scramble-answer" name="answer" type="text" autocomplete="off" autocapitalize="none" spellcheck="false" placeholder="Type the word…" aria-describedby="scramble-feedback" class="min-w-0 flex-1 rounded-xl border border-white/10 bg-black/30 px-4 py-3 text-sm text-white outline-none placeholder:text-white/30 focus:border-neon/50 focus:ring-2 focus:ring-neon/10">
+                        <button id="check-answer" type="submit" class="rounded-full bg-neon px-5 py-3 text-sm font-semibold text-black transition hover:bg-[#7dffae]">Check answer</button>
+                    </form>
+                    <p id="scramble-feedback" class="mt-4 min-h-6 text-sm text-white/50" role="status" aria-live="polite">Type your guess, then check your answer.</p>
+                    <button id="next-word" type="button" class="mt-2 hidden rounded-full border border-neon/30 px-4 py-2.5 text-sm font-medium text-neon hover:bg-neon/10">Next word →</button>
                 </div>
+                <aside class="border-t border-white/[.08] bg-black/20 p-5 md:p-8 lg:border-l lg:border-t-0" aria-label="Game score and controls">
+                    <p class="mono text-[10px] tracking-[.16em] text-white/35">YOUR SCORE</p>
+                    <p class="mt-3"><span id="scramble-score" class="text-4xl font-semibold tracking-tight text-neon">0</span><span class="ml-2 text-sm text-white/40">/ 8 correct</span></p>
+                    <p class="mt-3 text-sm leading-6 text-white/45">A quick sample inspired by the classroom vocabulary activities in TeachersOnline.</p>
+                    <button id="reset-scramble" type="button" class="mt-6 rounded-full border border-white/15 px-4 py-2.5 text-sm text-white/65 hover:border-white/35 hover:text-white">↻ Start over</button>
+                </aside>
             </div>
         </div>
         <div class="my-12">
